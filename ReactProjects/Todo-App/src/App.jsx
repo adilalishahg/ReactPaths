@@ -4,6 +4,8 @@ import TodoItem from "./components/todo-item"
 import TodoDetails from "./components/todo-details"
 import { Skeleton } from "@mui/material"
 import FormComponent from "./components/form"
+import Login from "./components/login"
+import Register from "./components/register"
  
 
 function App() {
@@ -73,8 +75,11 @@ function App() {
         
     //     />
     // </div>
-    <div>
-      <FormComponent/>
+    <div style={{ display:"flex",gap:"20px" }}>
+      {/* <FormComponent/> */}
+
+      <Login/>
+      <Register/>
     </div>
   )
 }
