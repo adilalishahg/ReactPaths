@@ -4,6 +4,8 @@ import Comment from "./pages/comment"
 import ReciepeDetailPage from "./pages/reciepe-details"
 import NotFoundPage from "./pages/not-found"
 import Layout from "./components/layout"
+import ReactHookForm from "./pages/reactHookForm"
+import Hooks from "./pages/hooks"
 
 function RoutesNew(){
   const element = useRoutes([
@@ -22,6 +24,14 @@ function RoutesNew(){
         {
           path: "reciepe-list/:id",
           element: <ReciepeDetailPage/>
+        },
+        {
+          path: "react-hook-form",
+          element: <ReactHookForm/>
+        },
+        {
+          path: "hooks",
+          element: <Hooks/>
         },
         {
           path: "*",
@@ -44,7 +54,13 @@ function App() {
       >Rciepe List</button>
       <button
         onClick={() => navigate("/home/comments")}
-      >Comments</button> 
+      >Comments</button>
+      <button
+        onClick={() => navigate("/home/react-hook-form")}
+      >react-hook-form</button> 
+      <button
+        onClick={() => navigate("/home/hooks")}
+      >hooks</button> 
 
       {/* <Routes>
         <Route path="/home" element={<Layout/>}>

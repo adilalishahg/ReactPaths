@@ -9,3 +9,5 @@ Currently, two official plugins are available:
 
 # Practice Custom Hooks For Like #useLocalStorage #useCounter #useSessionStorage 
 # useId #useOutSideClick
+
+## Check Zod Library for form
