@@ -3,6 +3,7 @@ import Reciepe from "./pages/reciepe"
 import Comment from "./pages/comment"
 import ReciepeDetailPage from "./pages/reciepe-details"
 import NotFoundPage from "./pages/not-found"
+import Layout from "./components/layout"
 
 function App() { 
   const navigate = useNavigate()
@@ -11,16 +12,18 @@ function App() {
       <h3>React Routing Custom Hooks And More</h3>
 
       <button
-        onClick={() => navigate("/reciepe-list")}
+        onClick={() => navigate("/home/reciepe-list")}
       >Rciepe List</button>
       <button
-        onClick={() => navigate("/comments")}
+        onClick={() => navigate("/home/comments")}
       >Comments</button> 
 
       <Routes>
-        <Route path="/reciepe-list" element={<Reciepe />}/>
-        <Route path="/comments" element={<Comment />}/>
-        <Route path="/reciepe-list/:id" element={<ReciepeDetailPage />}/>
+        <Route path="/home" element={<Layout/>}>
+          <Route path="reciepe-list" element={<Reciepe />}/>
+          <Route path="comments" element={<Comment />}/>        
+          <Route path="reciepe-list/:id" element={<ReciepeDetailPage />}/>
+        </Route>
         <Route path="*" element={<NotFoundPage />}/>
       </Routes>
     </>
